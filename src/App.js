@@ -1,24 +1,20 @@
-// import Home from"./pages/homepage/";
-// import Login from"./pages/loginpage";
-// import Profile from"./pages/profilepage";
-// import  Register from"./pages/registerpagwe";
-
-function App() {
-  return <profile />;
-    
-  function Profile() {
-  return <h1>My Profile</h1>;
-}
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Profile from "./pages/profile/Profile";
+import Register from "./pages/register/Register";
 
 function App() {
   return (
-    <div>
-      <Profile />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-}
-
-
 
 export default App;
